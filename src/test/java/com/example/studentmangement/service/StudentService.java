@@ -8,15 +8,14 @@ import java.util.List;
 
 @Service
 public class StudentService {
-
     @Autowired
     private StudentRepository studentRepository;
 
-    public Student saveStudent(Student student) {
-        return studentRepository.save(student);
-    }
-
     public List<Student> getAllStudents() {
         return studentRepository.findAll();
+    }
+
+    public void addStudent(Student student) {
+        studentRepository.save(student);
     }
 }

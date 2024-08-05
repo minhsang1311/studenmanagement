@@ -1,8 +1,7 @@
 package com.example.studentmangement.model;
-
-import lombok.Data;
 import javax.persistence.*;
 import java.util.List;
+import lombok.Data;
 
 @Entity
 @Data
@@ -13,6 +12,8 @@ public class Subject {
     private String name;
     private int credit;
 
-    @OneToMany(mappedBy = "subject", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "subject")
     private List<Score> scores;
+
+    // getters and setters
 }
