@@ -1,0 +1,13 @@
+com/example/studentmangement/repository/StudentRepository.class
+com/example/studentmangement/repository/SubjectRepository.class
+com/example/studentmangement/StudentManagementApplication.class
+com/example/studentmangement/service/StudentService.class
+com/example/studentmangement/service/ScoreService.class
+com/example/studentmangement/controller/SubjectController.class
+com/example/studentmangement/repository/ScoreRepository.class
+com/example/studentmangement/model/Subject.class
+com/example/studentmangement/service/SubjectService.class
+com/example/studentmangement/model/Score.class
+com/example/studentmangement/controller/StudentController.class
+com/example/studentmangement/controller/ScoreController.class
+com/example/studentmangement/model/Student.class

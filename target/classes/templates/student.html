@@ -1,0 +1,42 @@
+<!-- src/main/resources/templates/student_list.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Student List</title>
+</head>
+<body>
+<h1>Student List</h1>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Scores</th>
+        <th>Grades</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="student : ${students}">
+        <td th:text="${student.id}"></td>
+        <td th:text="${student.name}"></td>
+        <td th:text="${student.address}"></td>
+        <td>
+            <ul>
+                <li th:each="score : ${student.scores}">
+                    <span th:text="${score.subject.name}"></span>: <span th:text="${score.score1}"></span>, <span th:text="${score.score2}"></span>
+                </li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li th:each="score : ${student.scores}">
+                    <span th:text="${score.subject.name}"></span>: <span th:text="${score.grade}"></span>
+                </li>
+            </ul>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
